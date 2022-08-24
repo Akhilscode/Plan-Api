@@ -1,6 +1,6 @@
 package com.plan.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -30,10 +30,10 @@ public class PlanCategory {
 	private String updatedBy;
 	@Column(name="CREATED_DATE", updatable = false )
 	@CreationTimestamp
-	private Date createdDate;
+	private LocalDate createdDate;
 	@Column(name="UPDATED_DATE", insertable = false)
 	@UpdateTimestamp
-	private Date updatedDate;
+	private LocalDate updatedDate;
 	@Column(name="ACTIVE_SW")
 	private String activeSw;
 	
