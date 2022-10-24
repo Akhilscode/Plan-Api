@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -20,17 +21,19 @@ import lombok.Data;
 @Table(name="PLAN_MASTER")
 public class Plan {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="PLAN_ID")
   private Integer planId;
+	@Column(name="APP_ID")
+  private Integer appId;
 	@Column(name="PLAN_NAME")
   private String planName;
-	@Column(name="START_DATE")
-  private LocalDate startDate;
-	@Column(name="END_DATE")
-  private LocalDate endDate;
-	@Column(name="CATEGORY_ID")
-  private Integer categoryId;
+	@Column(name="PLAN_START_DATE")
+  private LocalDate planStartDate;
+	@Column(name="PLAN_END_DATE")
+  private LocalDate planEndDate;
+	@Column(name="PLAN_CATEGORY_ID")
+  private Integer planCategoryId;
 	@Column(name="CREATED_BY")
   private String createdBy;
 	@Column(name="UPDATED_BY")

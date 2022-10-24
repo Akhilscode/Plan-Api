@@ -27,7 +27,7 @@ public class PlanServiceImpl implements PlanService {
 		Map<Integer, String> hashmap = new HashMap<Integer, String>();
 		List<PlanCategory> planCategories = pcrepo.findAll();
 		planCategories.forEach(planCategory ->{
-			hashmap.put(planCategory.getCategoryId(), planCategory.getCategoryName());
+			hashmap.put(planCategory.getPlanCategoryId(), planCategory.getPlanName());
 		});
 		return hashmap;
 	}
