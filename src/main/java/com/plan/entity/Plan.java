@@ -24,8 +24,8 @@ public class Plan {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="PLAN_ID")
   private Integer planId;
-	@Column(name="APP_ID")
-  private Integer appId;
+//	@Column(name="APP_ID")
+//  private Integer appId;
 	@Column(name="PLAN_NAME")
   private String planName;
 	@Column(name="PLAN_START_DATE")
